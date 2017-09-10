@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bank Cards</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<header class="main-header">
+		<h1 class="main-header__title">
+			Notebook of bank cards
+		</h1>		
+	</header>
+	<main class="main">
+		<div class="form-container" id="add-card-form">
+			<form class="form-add">
+				<div class="form-add__input-container form-add__input-container--card-number">
+					<label for="input-add-number" class="form-add__input-label">
+						Card Number:
+					</label>
+					<input type="text" class="form-add__input" id="input-add-number" required>
+				</div>
+				<div class="form-add__input-container">
+					<label for="textarea-add-comment" class="form-add__input-label">
+						User Comment:
+					</label>
+					<textarea name="textarea-add-comment" id="textarea-add-comment" cols="30" rows="1" class="form-add__comment" required maxlength="1024"></textarea>
+				</div>
+				<div class="form-add__input-container form-add__input-container--card-type" >
+					<label for="card_type" class="form-add__input-label">
+						Card Type:
+					</label>
+					<select name="card_type" id="card_type" class="form-add__select">
+						<option value="visa">visa</option>
+						<option value="master_card">master card</option>
+					</select>					
+				</div>
+				<button type="button" class="form-add__add" id="js-add-card">Add</button>
+			</form>
+		</div>
+
+		<div class="notebook" id="notebook"></div>
+
+		<div class="pop-up-container" id="confirm-block">
+			<div class="pop-up-confirm js-confirm-form">
+				<form class="form-confirm">
+					<p class="pop-up-confirm__question">
+						confirm your Name and Password:
+					</p>
+					<label for="confirm-user-name" class="pop-up-confirm__label js-confirm-username">
+						User Name:
+					</label>
+					<input type="text" class="pop-up-confirm__input" id="confirm-user-name">
+					<label for="confirm-password" class="pop-up-confirm__label js-confirm-password">
+						Password:
+					</label>
+					<input type="password" class="pop-up-confirm__input" id="confirm-password">
+					<div class="pop-up-confirm__btn-container">
+						<button type="button" class="pop-up-confirm__btn js-btn-confirm">Confirm</button>
+						<button type="button" class="pop-up-confirm__btn js-btn-cancel">Cancel</button>
+					</div>
+				</form>
+			</div>
+			<div class="shadow"></div>
+		</div>	
+	</main>
+</body>
+</html>
