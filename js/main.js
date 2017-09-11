@@ -32,21 +32,14 @@ window.addEventListener('load', function () {
 			this.data = data;
 		}
 
-		addCard(item) {
-			/*here checking for item data if() return, dont need if I have form validation*/
-
-
+		addCard(item) {			
 			this.data.push(item);
-			updateLocalStorage(this.data);
-			
+			updateLocalStorage(this.data);			
 		}
 
-		removeCard(item) {
-			//let index = this.data.indexOf(item);
+		removeCard(item) {			
 			let index = parseInt(item);
-
 			this.data.splice(index, 1);
-
 			updateLocalStorage(this.data);			
 		}
 
@@ -73,26 +66,21 @@ window.addEventListener('load', function () {
 			};
 		}
 
-		/*init() {
-			this.elements = {
-				input: document.getElementById('add-card-form'), //make for this form
-				addBtn: document.getElementById('js-add-card'),
-				notebookBlock: document.getElementById('notebook')
-			}
-
-			renderList(model.data);
-
-		}*/
-
 		createDiv(elem, parent, className, data) {
 			let node = document.createElement(elem);
 			node.className = `notebook__item notebook__${className}`;
 
-			if(className === 'type') {
+			if (className === 'type') {
 				node.appendChild(data);
 			} else {
 				node.innerHTML = data;
-			}	
+			}
+
+			if (className === 'comment') {
+				if (data.length <= 18) {
+					node.classList.add('comment-after-hidden');
+				}
+			}
 
 			parent.appendChild(node);		
 		}
@@ -116,7 +104,7 @@ window.addEventListener('load', function () {
 			let btnDelete = document.createElement('button');
 			btnDelete.type = 'button';
 			btnDelete.className = 'notebook__item notebook__btn-delete js-btn-delete';
-			btnDelete.innerHTML = 'Delete';
+			//btnDelete.innerHTML = 'Delete';
 			divContainer.appendChild(btnDelete);			
 
 			this.elements.notebookBlock.appendChild(divContainer);
