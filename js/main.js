@@ -213,7 +213,7 @@ window.addEventListener('load', function () {
 		},
 		{
 			number: '456745694574',
-			comment: 'comment 1',
+			comment: 'comment 2',
 			type: 'master_card'
 		}
 	];*/

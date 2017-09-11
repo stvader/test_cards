@@ -238,11 +238,12 @@ img {
 	top: 50%;
 	left: 50%;
 	z-index: 9000;
-	width: 300px;
-	height: 200px;
-	margin-top: -100px;
-	margin-left: -150px;
+	width: 360px;
+	height: 300px;
+	margin-top: -150px;
+	margin-left: -180px;
 	padding: 30px;
+	box-sizing: border-box;
 	background-color: #fff;
 
 }
@@ -268,22 +269,36 @@ img {
 .pop-up-confirm__input {
 	width: 100%;
 	margin-bottom: 20px;
+	padding: 2px 4px;
 }
 
 .pop-up-confirm__btn-container {
-	width: 160px;
+	width: 180px;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .pop-up-confirm__btn {
+	width: 70px;
+	height: 30px;
+
+	border-radius: 4px;
+	border: none;
+	outline: none;
+
+	background-color: #100f27;
+
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
 
 	cursor: pointer;
 }
 
 .pop-up-confirm__btn:not(:last-child) {
-	margin-right: 30px;
+	margin-right: 25px;
 }
 
 .shadow {
@@ -388,5 +403,11 @@ img {
 		left: 4px;
 		top: 9px;
 		background-color: #fff;
+	}
+
+	.pop-up-confirm {
+		width: 240px;
+		margin-left: -120px;
+
 	}
 }
